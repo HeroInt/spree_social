@@ -16,8 +16,8 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.add_dependency 'spree_core', '= 1.0.0.rc2'
-  s.add_dependency 'spree_auth', '= 1.0.0.rc2'
+  s.add_dependency 'spree_core', '= 1.0.0.rc3'
+  s.add_dependency 'spree_auth', '= 1.0.0.rc3'
   s.add_dependency 'omniauth'
   s.add_dependency 'oa-core'
   s.add_dependency 'omniauth-twitter'
