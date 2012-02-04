@@ -25,6 +25,7 @@ module SpreeSocial
 
   # Setup all OAuth providers
   def self.init_provider(provider)
+    return true unless ActiveRecord::Base.connection.table_exists?('spree_user_authentications')
     key, secret = nil
     Spree::AuthenticationMethod.where(:environment => ::Rails.env).each do |auth_method|
       if auth_method.provider == provider
