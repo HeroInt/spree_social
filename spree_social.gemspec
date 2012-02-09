@@ -3,16 +3,14 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_social'
   s.version     = '1.0.0'
-  s.summary     = 'TODO: Add gem summary here'
-  s.description = 'TODO: Add (optional) gem description here'
+  s.summary     = 'Adds social network login services (OAuth) to Spree'
   s.required_ruby_version = '>= 1.8.7'
 
-  # s.author            = 'You'
-  # s.email             = 'you@example.com'
-  # s.homepage          = 'http://www.spreecommerce.com'
+  s.author            = 'John Dyer'
+  s.email             = 'john@spreecommerce.com'
+  s.homepage          = 'http://www.spreecommerce.com'
 
-  #s.files         = `git ls-files`.split("\n")
-  #s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
+  s.files         = `git ls-files`.split("\n")
   s.require_path = 'lib'
   s.requirements << 'none'
 
@@ -21,6 +19,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'oa-core'
   s.add_dependency 'omniauth-twitter'
   s.add_dependency 'omniauth-facebook'
+  s.add_dependency 'omniauth-github'
 
   s.add_development_dependency 'capybara', '1.0.1'
   s.add_development_dependency 'factory_girl'

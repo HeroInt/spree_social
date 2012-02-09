@@ -1,7 +1,8 @@
 module SpreeSocial
   OAUTH_PROVIDERS = [
     ["Facebook", "facebook"],
-    ["Twitter", "twitter"]
+    ["Twitter", "twitter"],
+    ["Github", "github"]
   ]
 
   class Engine < Rails::Engine
@@ -33,7 +34,7 @@ module SpreeSocial
         secret = auth_method.api_secret
         puts("[Spree Social] Loading #{auth_method.provider.capitalize} as authentication source")
       end
-    end
+    end if ActiveRecord::Base.connection.table_exists?('spree_authentication_methods')
     self.setup_key_for(provider.to_sym, key, secret)
   end
 
